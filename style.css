@@ -1,0 +1,281 @@
+/* ====== MOBILE FIRST STYLES ====== */
+
+body {
+    background-color: #cdcdcd;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* General containers */
+.container, .container2 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+}
+
+/* Heading */
+.heading {
+    font-size: 36px;
+    text-align: center;
+    color: black;
+    margin: 50px 10px 20px 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-size: 28px;
+    margin: 20px 10px;
+}
+
+/* Boxes and circles */
+.box {
+    background-color: #363737;
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.circle {
+    background-color: white;
+    width: 80%;
+    max-width: 200px;
+    height: 80%;
+    max-height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #FDBE02;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Rectangle under circle */
+.rectangle {
+    background-color: #FDBE02;
+    width: 100%;
+    max-width: 250px;
+    height: 400px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+/* Lists */
+li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/* Links */
+li a {
+    color: black;
+    text-decoration: none;
+    margin-left: 0;
+}
+
+li a:hover {
+    color: white;
+}
+
+/* Mini circles */
+.minicircle1, .minicircle2, .minicircle3 {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.minicircle1 img, .minicircle2 img, .minicircle3 img {
+    width: 85%;
+    height: 85%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.minicircle1 img:hover {
+    transform: scale(1.3) rotate(10deg);
+}
+
+.minicircle2 img:hover {
+    transform: scale(1.4) rotate(10deg);
+}
+
+.minicircle3 img:hover {
+    transform: scale(1.6) rotate(10deg);
+}
+
+/* Funfacts */
+.funfacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.facts {
+    background-color: #FDBE02;
+    color: black;
+    width: 80%;
+    max-width: 180px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    font-weight: 600;
+    margin: 10px auto;
+}
+
+/* Fun image */
+.fun-img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    object-fit: contain;
+    margin: 10px auto;
+}
+
+/* Line and points (timeline) */
+.line {
+    width: 3px;
+    height: 400px;
+    background-color: black;
+    margin: 20px auto;
+    pointer-events: none;
+}
+
+.c1, .c8 {
+    background-color: black;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.c2, .c3, .c4, .c5, .c7 {
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    transition: transform 0.3s ease;
+}
+
+.c2 img, .c3 img, .c4 img, .c5 img, .c7 img {
+    width: 70%-100%;
+    height: 70%-100%;
+    object-fit: cover;
+}
+
+.c2:hover, .c3:hover, .c4:hover, .c5:hover, .c7:hover {
+    transform: scale(1.12);
+}
+
+/* Headings and subtexts */
+.e, .f, .g {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-size: 20px;
+    margin: 10px auto;
+}
+
+.e_o, .f_o, .g_o {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 5px;
+}
+
+/* Desktop / larger screens */
+@media(min-width: 768px) {
+    .heading {
+        font-size: 60px;
+        margin-left: 50px;
+        text-align: left;
+    }
+
+    header {
+        margin-left: 50px;
+        justify-content: flex-start;
+        font-size: 35px;
+    }
+
+    main {
+        margin: 10px 50px;
+    }
+
+    .box, .rectangle {
+        max-width: 250px;
+    }
+
+    .funfacts {
+        flex-direction: row;
+        margin-left: 50px;
+    }
+
+    .line {
+        height: 480px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .heading {
+        font-size: 100px;
+        margin-left: 380px;
+        text-align: left;
+    }
+
+    header {
+        margin-left: 280px;
+        font-size: 35px;
+    }
+
+    main {
+        margin-left: 280px;
+        margin-right: 125px;
+    }
+
+    .funfacts {
+        margin-left: 600px;
+    }
+
+    .minicircle1, .minicircle2, .minicircle3 {
+        margin-left: 280px;
+    }
+}
